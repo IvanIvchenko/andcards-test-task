@@ -11,7 +11,6 @@ const getFilesRecursively = (directory) => {
     getJsonFileContent(directoriesNumber, filesNumber, directory),
     function (err) {
         if (err) throw err;
-        console.log('File is created successfully.');
     }
   );
 
@@ -39,7 +38,5 @@ const getDirectoriesNumber = (files) => {
 const getFilesNumber = (files) => {
   return files.filter((file) => file.isFile()).length;
 };
-
-//console.log(__dirname);
 
 getFilesRecursively(__dirname);
